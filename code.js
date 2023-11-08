@@ -2,6 +2,9 @@ function tsp_hk(cities, start, dm, cache)
 {
     if (cities.length == 2) 
     {
+        var key = JSON.stringify(cities)
+        if (cache[key] === undefined) cache[key] = {};
+        if (cache[key][start] !== undefined) return cache[key][start];
         return dm[start][cities[1]] 
     } 
     else 
