@@ -10,7 +10,7 @@ function tsp_hk(cities, start, dm, cache)
     else 
     {
         var key = JSON.stringify(cities)
-        if (cache[key] === undefined) cache[key] = [];
+        if (cache[key] === undefined) cache[key] = {};
 
         if (cache[key][start] !== undefined) return cache[key][start];
 
@@ -57,5 +57,5 @@ let dm4 = [
     [7,3,8,6,0]
     ];
   
-console.log(tsp_hk([0,1,2,3,4],0,dm2,[]))
-console.log(tsp_hk([0,1,2,3,4,5,6,7,8,9,10],0,dm4,[]))
+console.log(tsp_hk([0,1,2,3,4],0,dm2,{}))
+console.log(tsp_hk([0,1,2,3,4,5,6,7,8,9,10],0,dm4,{}))
