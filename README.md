@@ -49,4 +49,6 @@ is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
 - Worst Case Memory Complexity : O(n!)
-* our cities array can have n! permutations, therefore our cache will need to store n! items. We also must take into account that we call the tsp function n times to search for the shortest path from each start node. So the worst case time complexity simplifies from O(n * n!) to O(n!)
+* our cities array can have n! permutations, therefore our cache will need to store n! items. 
+- Worst Case Time Complexity : O(n!)
+* our cities array can have n! permutations, so in the worst case, we will have n! recursive calls. We also must take into account that we call the tsp function n times to search for the shortest path from each start node. So the worst case time complexity simplifies from O(n * n!) to O(n!)
