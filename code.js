@@ -2,6 +2,7 @@
 function tsp_hk(dm)
 {
     let cities = dm.map((item,index) => index)
+    cities = cities.sort()
     
     if (cities.length == 1) return 0;
 
