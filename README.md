@@ -51,4 +51,4 @@ reasoning, to this markdown file.
 - Worst Case Memory Complexity : $O(n!)$
 * our cities array can have n! permutations, therefore our cache will need to store n! items. 
 - Worst Case Time Complexity : $O(n!)$
-* our cities array can have n! permutations, so in the worst case, we will have n! recursive calls. We also must take into account that we call the tsp function n times to search for the shortest path from each start node, AND we use an insertion sort function that is called once. Insertion sort has a worst complexity $O(n^2)$ . So the worst case time complexity simplifies from $O(n * n! + n^2)$ to $O(n! + n^2)$
+* our cities array can have n! permutations, so in the worst case, we will have n! recursive calls. We also must take into account that we call the tsp function n times to search for the shortest path from each start node, AND we use an insertion sort function that is called once. The built in sort funciton uses a combination of sorting algorithms but has an algorithm $O(nlog(n))$ . So the worst case time complexity simplifies from $O(n * n! + nlog(n))$ to $O(n! + nlog(n))$
