@@ -1,19 +1,8 @@
-function sort(arr) {
-  for(var i = 1; i < arr.length; i++) {
-    var val = arr[i];
-    var j;
-    for(j = i; j > 0 && arr[j-1] > val; j--) {
-      arr[j] = arr[j-1];
-    }
-    arr[j] = val;
-  }
-  return arr;
-}
 
 function tsp_hk(dm)
 {
     let cities = dm.map((item,index) => index)
-    cities = sort(cities)
+    cities = cities.sort()
     
     if (cities.length == 1) return 0;
 
