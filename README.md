@@ -48,7 +48,8 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
-- Worst Case Memory Complexity : $O(n!)$
-* our cities array can have n! permutations, therefore our cache will need to store n! items. 
-- Worst Case Time Complexity : $O(n! + nlog(n))
-* our cities array can have n! permutations, so in the worst case, we will have n! recursive calls. We also must take into account that we call the tsp function n times to search for the shortest path from each start node, AND we use an insertion sort function that is called once. The built in sort funciton uses a combination of sorting algorithms but has an algorithm $O(nlog(n))$ . So the worst case time complexity simplifies from $O(n * n! + nlog(n))$ to $O(n! + nlog(n))$
+- Worst Case Memory Complexity : $O(n * 2^n)$
+* the cache stores $2^n$ keys every call, therefore the cache will store $n * 2^n$ elements when the algorithm is done running since we may have multiple of the same permutations that are unique because they will have different start values.  
+- Worst Case Time Complexity : $O(n * 2^n)$
+* since we reduce the number of subproblems stored in the cache by using memoization, the number of calls here would not be n! but instead would be 2^n. And since we need to check all start options, in the worst case, out time complexity will end up being $O(n * 2^n)$
+
