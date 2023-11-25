@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12730535&assignment_repo_type=AssignmentRepo)
 # Traveling Salesperson Problem -- Held-Karp Algorithm
 
 This exercise is about the Traveling Salesperson Problem I mentioned in the
@@ -46,3 +47,10 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+- Worst Case Memory Complexity : $O(n * 2^n)$
+* the cache stores $2^n$ keys every call, therefore the cache will store $n * 2^n$ elements when the algorithm is done running since we may have multiple of the same permutations that are unique because they will have different start values.  
+- Worst Case Time Complexity : $O(n * 2^n)$
+* since we reduce the number of subproblems stored in the cache by using memoization, the number of calls here would not be n! but instead would be $2^n$. And since we need to check all start options, in the worst case, our time complexity would end up being $O(2^n). However, we also must take into that for each subproblem we do $O(n)$ work by creating a newcities array, therefore the total time complexity will be $O(n * 2^n)$
+
+
